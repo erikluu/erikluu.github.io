@@ -1773,7 +1773,7 @@ function startScreen()
 	// Credits
 	push();
 		fill(255);
-		translate(300, 570);
+		translate(350, 570);
 		scale(1.2);
 		strokeWeight(5);
 		stroke(0);
