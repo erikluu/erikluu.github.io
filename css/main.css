@@ -6,10 +6,15 @@ img {
 
 
 .header {
-    padding: 50px;
+    padding: 30px;
     text-align: center;
-    background:cornflowerblue;
-    color:aliceblue;
+    background:#4357d9;
+    color:#FFFFFF;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .header h2 {
@@ -19,3 +24,4 @@ img {
 .header p {
     font-size: 30px;
 }
+
