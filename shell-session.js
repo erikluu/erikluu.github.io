@@ -6,7 +6,8 @@ if (document.getElementsByClassName('demo').length > 0) {
 
   function typeTxtOut () {
     if (i < txt.length) {
-      document.getElementsByClassName('demo')[0].innerHTML += txt.charAt(i++);
+      document.getElementsByClassName('demo')[0].innerHTML += txt.charAt(i);
+      i++;
       setTimeout(typeTxtOut, speed);
     }
   }
