@@ -1,31 +1,38 @@
 /* css variables*/
 :root {
-  --primary-color: #432E30;
-  --primary-color-light: #8E7474;
-  --accent-color: #FE6A6B;
-  --accent-color-light: #FFE4E4;
-  --accent-color-dark: #B94B4C;
-  --white-color: #FAFBFC;
-  --light-gray-color: #C6CBD1;
-  --medium-gray-color: #959DA5;
-  --dark-gray-color: #444D56; 
-  --bg-color: #F8F8FA;
-  --code-bg-color: #F0E8E8;
+  --primary-color: #432e30;
+  --primary-color-light: #8e7474;
+  --accent-color: #fe6a6b;
+  --accent-color-light: #ffe4e4;
+  --accent-color-dark: #b94b4c;
+  --white-color: #fafbfc;
+  --light-gray-color: #c6cbd1;
+  --medium-gray-color: #959da5;
+  --dark-gray-color: #444d56;
+  --dark-blue-gray-color: #001220;
+  --bg-color: #f8f8fa;
+  --code-bg-color: #f0e8e8;
 }
 
-html, body {
-  padding: 0;
+html,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-bottom: 3em;
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-color: white;
 }
 
 p {
   font-weight: 300;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -36,7 +43,7 @@ nav {
 
 /* logo -- don't have one rn...*/
 .logo {
-  background: url('logo.svg') no-repeat;
+  background: url("logo.svg") no-repeat;
   background-size: contain;
   margin: 1rem 0 0 1rem;
 }
@@ -98,10 +105,62 @@ nav {
   background-color: #171717;
   min-height: 300px;
   animation: fadeUp 2s;
-  box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 12px 36.8px 0.5px rgba(0, 0, 0, 0.5);
 }
 
 .hero__terminal pre {
   white-space: pre-line;
   padding-top: 1rem;
+}
+
+.spacer--color {
+  color: var(--dark-blue-gray-color);
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("./images/layer1.svg");
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 1em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
