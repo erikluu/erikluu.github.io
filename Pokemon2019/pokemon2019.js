@@ -1778,7 +1778,7 @@ function startScreen()
 		strokeWeight(5);
 		stroke(0);
 		textStyle(ITALIC);
-		text('By: Erik Luu and Carlo Ruggiero', 0, 0);
+		text('By: Erik Luu, Carlo Ruggiero, Nick Koganti, and Chris Yun', 0, 0);
 	pop();
 }
 
