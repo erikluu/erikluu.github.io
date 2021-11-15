@@ -118,7 +118,7 @@ nav {
 }
 
 .spacer {
-  aspect-ratio: 960/300;
+  aspect-ratio: 960/250;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -127,6 +127,10 @@ nav {
 
 .layer1 {
   background-image: url("./images/layer1.svg");
+}
+
+.layer2 {
+  background-image: url("./images/layer2.svg");
 }
 
 /* Float four columns side by side */

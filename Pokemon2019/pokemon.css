@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #432e30;
+    --primary-color-light: #8e7474;
+    --accent-color: #fe6a6b;
+    --accent-color-light: #ffe4e4;
+    --accent-color-dark: #b94b4c;
+    --white-color: #fafbfc;
+    --light-gray-color: #c6cbd1;
+    --medium-gray-color: #959da5;
+    --dark-gray-color: #444d56;
+    --dark-blue-gray-color: #001220;
+    --bg-color: #f8f8fa;
+    --code-bg-color: #f0e8e8;
+  }
+
+html,
+* {
+  box-sizing: border-box;
+}
+
+body {
+    padding-bottom: 3em;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: white;
+  }
+
+.game {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
