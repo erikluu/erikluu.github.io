@@ -1,7 +1,7 @@
 // setup typewriter effect in the terminal
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
-  var txt = `start\n\n###a little about me\n\n- Studying Computer Science @ Cal Poly, San Luis Obispo\n- NCAA D1 Cross Country & Track Athlete\n- Research Assistant: AI for Search and Rescue\n- From Seattle, WA`;
+  var txt = `start ...\n\n###a little about me\n\n- Studying Computer Science @ Cal Poly, San Luis Obispo\n- NCAA D1 Cross Country & Track Athlete\n- From Seattle, WA`;
   var speed = 30;
 
   function typeTxtOut () {
@@ -12,5 +12,5 @@ if (document.getElementsByClassName('demo').length > 0) {
     }
   }
 
-  setTimeout(typeTxtOut, 1500);
+  setTimeout(typeTxtOut, 2250);
 }
