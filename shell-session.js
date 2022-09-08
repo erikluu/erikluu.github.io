@@ -2,7 +2,7 @@
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
   var txt = `start ...\n\n###a little about me\n\n- Studying Computer Science @ Cal Poly, San Luis Obispo\n- NCAA D1 Cross Country & Track Athlete- Software Engineer Intern for Cylerian LLC\n- Research Assistant, AI for Search and Rescue\n- Research Assistant, Damage Map\n- From Seattle, WA`;
-  var speed = 110;
+  var speed = 20;
 
   function typeTxtOut () {
     if (i < txt.length) {
@@ -12,5 +12,5 @@ if (document.getElementsByClassName('demo').length > 0) {
     }
   }
 
-  setTimeout(typeTxtOut, 2250);
+  setTimeout(typeTxtOut, 2000);
 }
