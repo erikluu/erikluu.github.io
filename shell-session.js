@@ -2,7 +2,7 @@
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
   var txt = `describe -me\n\n###a little about me\n\n- Studying Computer Science @ Cal Poly, San Luis Obispo\n- NCAA D1 Cross Country & Track Athlete\n- Software Engineer Intern for Cylerian LLC\n- From Seattle, WA`;
-  var speed = 1;
+  var speed = 5;
 
   function typeTxtOut () {
     if (i < txt.length) {
