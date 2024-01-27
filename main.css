@@ -22,8 +22,8 @@ html,
 body {
   padding-bottom: 3em;
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
   background-color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 p {
