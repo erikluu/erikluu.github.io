@@ -337,10 +337,59 @@ main {
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s;
 }
 
-a.card:hover {
+a.card:hover,
+.card--linked:hover {
   transform: translateY(-3px);
   border-color: var(--accent-color);
   box-shadow: 0 10px 24px var(--shadow-color-hover);
+}
+
+/* card whose main link covers the whole card, with secondary links layered on top */
+.card--linked {
+  position: relative;
+}
+
+.card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.card__link:focus-visible {
+  outline: none;
+}
+
+.card--linked:has(.card__link:focus-visible) {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.card__code {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.9rem;
+  padding: 0.15rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--muted-color) 40%, transparent);
+  border-radius: 999px;
+  color: var(--muted-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.card__code:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color-dark);
+}
+
+.card__code .icon {
+  width: 0.95em;
+  height: 0.95em;
+  margin-right: 0.4em;
 }
 
 .card--fun {
