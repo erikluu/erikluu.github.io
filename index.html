@@ -1,88 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="erikluu.github.io" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hi, I'm Erik Luu</title>
-<!--     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    /> -->
+    <title>Erik Luu · Software Engineer</title>
+    <meta
+      name="description"
+      content="Erik Luu is a software engineer at Boeing building real-time sensor fusion software in C++. M.S. Computer Science, Cal Poly SLO."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Erik Luu · Software Engineer" />
+    <meta
+      property="og:description"
+      content="Real-time sensor fusion in C++ at Boeing. M.S. Computer Science, Cal Poly SLO."
+    />
+    <meta property="og:url" content="https://erikluu.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
-    />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="./main.css" />
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("theme"); } catch (e) {}
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
     <link rel="icon" href="./images/pikachu.ico" />
   </head>
   <body>
-    <nav>
-      <ul class="menu">
-        <li class="menu__item">
-          <a href="./resume.pdf" class="link link--dark"
-            ><i class="fa-solid fa-file"></i> Resume</a
-          >
-<!--           <i class="fa-solid fa-user-tie"></i> -->
-        </li>
-        <li class="menu__item">
-          <a
-            href="https://www.linkedin.com/in/erik-luu-2859871b7/"
-            class="link link--dark"
-            ><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a
-          >
-        </li>
-        <li class="menu__item">
-          <a href="https://github.com/erikluu" class="link link--dark"
-            ><i class="fa-brands fa-github"></i> Github</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <h1 class="hero__title">Hi, I'm Erik Luu</h1>
-      <p class="hero__description"></p>
-    </div>
-    <div class="hero__terminal">
-      <pre>
-            <code class="shell-session demo">erikluu ~ $ </code>
-            </pre>
-    </div>
-    <script src="shell-session.js"></script>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-file" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v14H3zM3 6l9 7 9-7"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    </svg>
 
-    <section>
-      <h1 style="text-align: center" class="hero__title">Projects</h1>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <a href="./Pokemon2019/pokemon2019.html" target="_blank" class="link link--dark"><i class="fa fa-gamepad"></i> Pokémon Game (2019)</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <a href="https://github.com/erikluu/LociNet" target="_blank" class="link link--dark"><i class="fa-solid fa-circle-nodes"></i> Thesis: LociNet</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <a href="https://medium.com/@erikluu/transparency-in-artificial-intelligence-496e71905060" target="_blank" class="link link--dark"><i class="fa-brands fa-medium"></i>  XAI Article</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <a href="https://github.com/erikluu/AccessibleMaps" target="_blank" class="link link--dark"><i class="fa fa-map"></i> AccessibleMaps</a>
-          </div>
-        </div>
+    <header class="site-header">
+      <nav aria-label="Primary">
+        <ul class="menu">
+          <li><a href="./resume.pdf" class="link"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Resume</a></li>
+          <li><a href="https://www.linkedin.com/in/erik-luu/" class="link"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg>LinkedIn</a></li>
+          <li><a href="https://github.com/erikluu" class="link"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>GitHub</a></li>
+          <li>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+              <svg class="icon theme-toggle__moon" aria-hidden="true"><use href="#i-moon" /></svg>
+              <svg class="icon theme-toggle__sun" aria-hidden="true"><use href="#i-sun" /></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1 class="hero__title">Hi, I'm Erik Luu</h1>
+        <p class="hero__subtitle">
+          Software engineer building real-time sensor fusion software in C++ at Boeing.
+        </p>
       </div>
-    </section>
+    </header>
 
-    <div class="spacer layer1"></div>
+    <main>
+      <div class="terminal">
+        <div class="terminal__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <pre class="terminal__body"><code id="shell">erikluu ~ $ </code><span class="terminal__cursor" aria-hidden="true"></span></pre>
+      </div>
+      <noscript>
+        <p class="center">Software Engineer @ Boeing · M.S. CS, Cal Poly SLO · NCAA D1 runner · Seattle, WA</p>
+      </noscript>
+
+      <section class="section" aria-labelledby="experience">
+        <h2 id="experience" class="section__title">Experience</h2>
+        <ul class="timeline">
+          <li><span class="timeline__org">Boeing</span><span class="timeline__role">Software Engineer · real-time sensor fusion in C++</span><span class="timeline__date">2024 – now</span></li>
+          <li><span class="timeline__org">Cylerian</span><span class="timeline__role">Software Engineering Intern</span><span class="timeline__date">2022</span></li>
+          <li><span class="timeline__org">Cal Poly SLO</span><span class="timeline__role">M.S. &amp; B.S. Computer Science · NCAA D1 runner</span><span class="timeline__date">2019 – 2024</span></li>
+        </ul>
+        <p class="more"><a class="link" href="./resume.pdf">Full details in my resume <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow" /></svg></a></p>
+      </section>
+
+      <section class="section" aria-labelledby="projects">
+        <h2 id="projects" class="section__title">Research &amp; Projects</h2>
+        <div class="grid">
+          <a class="card" href="https://github.com/erikluu/LociNet">
+            <p class="card__kicker">Graduate thesis · 2023–24</p>
+            <h3 class="card__title">LociNet <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow" /></svg></h3>
+            <p class="card__text">An NLP pipeline that turns large document collections into knowledge graphs. Benchmarks embedding models, clustering algorithms, and edge strategies for retrieval quality.</p>
+            <ul class="tags"><li>Python</li><li>NLP</li><li>Knowledge Graphs</li></ul>
+          </a>
+          <div class="card">
+            <p class="card__kicker">Undergraduate research · 2024</p>
+            <h3 class="card__title">CPSync</h3>
+            <p class="card__text">A multi-agent RAG system using LLM function calls, powering a Discord bot that answers Cal Poly class scheduling questions.</p>
+            <ul class="tags"><li>LLMs</li><li>RAG</li><li>JavaScript</li><li>MongoDB</li></ul>
+          </div>
+          <a class="card" href="https://github.com/erikluu/AccessibleMaps">
+            <p class="card__kicker">Undergraduate thesis · 2023</p>
+            <h3 class="card__title">AccessibleMaps <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow" /></svg></h3>
+            <p class="card__text">A web app that plans ADA-compliant walking routes using sidewalk grade, for a wide range of physical abilities.</p>
+            <ul class="tags"><li>React</li><li>Node.js</li><li>Geospatial</li></ul>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="other">
+        <h2 id="other" class="section__title">Misc.</h2>
+        <div class="grid">
+          <a class="card card--fun" href="./Pokemon2019/pokemon2019.html">
+            <p class="card__kicker">Game · 2019</p>
+            <h3 class="card__title">Polymon: Green &amp; Gold <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow" /></svg></h3>
+            <p class="card__text">A Pokémon-style adventure with battles, built in p5.js with Carlo Ruggiero. Playable in the browser.</p>
+          </a>
+          <a class="card card--fun" href="https://medium.com/@erikluu/transparency-in-artificial-intelligence-496e71905060">
+            <p class="card__kicker">Writing</p>
+            <h3 class="card__title">Transparency in AI <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow" /></svg></h3>
+            <p class="card__text">An article on explainable AI (XAI) and why model transparency matters.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a class="link" href="mailto:eeluu19@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>eeluu19@gmail.com</a>
+      </p>
+      <p class="site-footer__fine">© 2026 Erik Luu</p>
+    </footer>
+
+    <script>
+      document.getElementById("theme-toggle").addEventListener("click", function () {
+        var t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+        try { localStorage.setItem("theme", t); } catch (e) {}
+      });
+    </script>
+    <script src="./shell-session.js"></script>
   </body>
 </html>

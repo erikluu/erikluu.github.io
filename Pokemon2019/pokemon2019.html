@@ -1,22 +1,26 @@
-<html>
-<HEAD>
-   <TITLE>Pokemon Game (2019)</TITLE>
-   <link rel="stylesheet" href="./pokemon.css" />
-</HEAD>
-<body background-color = "black" text = FFFFFF link = ffaa00 vlink = ffaa00 aLink = ffaa00> 
-  
-    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-
-    
-    
-
-        
-    <script style="text-align: center" language="javascript" type="text/javascript" src="pokemon2019.js"></script>
-
-    <!-- <p>Use ARROWS, SHIFT and ENTER to interact with the world</p> -->
-
-    <!-- <a href="https://erikluu.github.io">Back to home page</a> -->
-
-    
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokémon Game (2019) · Erik Luu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./pokemon.css" />
+    <link rel="icon" href="../images/pikachu.ico" />
+  </head>
+  <body>
+    <header class="bar">
+      <a href="../index.html" class="back">← Back to erikluu.github.io</a>
+    </header>
+    <main>
+      <h1>Pokémon Game (2019)</h1>
+      <p class="hint">Use the <kbd>arrow keys</kbd> to move, <kbd>Enter</kbd> to interact, and <kbd>Shift</kbd> to go back in battle menus. Best on a desktop with a keyboard.</p>
+      <div id="game"></div>
+    </main>
+    <script src="libraries/p5.js"></script>
+    <script src="pokemon2019.js"></script>
+  </body>
 </html>

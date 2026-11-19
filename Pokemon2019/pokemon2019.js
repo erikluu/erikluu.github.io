@@ -78,7 +78,7 @@ var treeY3 = [];
 
 function setup()
 {
-	createCanvas(900, 600);
+	createCanvas(900, 600).parent("game");
 
 	//gradient colors for start screen
 	color3 = color('#D0C98B');
