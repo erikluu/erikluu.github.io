@@ -419,8 +419,8 @@ a.card:hover {
 .site-footer {
   padding: 3rem 1rem 0;
   text-align: center;
-  aspect-ratio: 960 / 200;
-  min-height: 12rem;
+  /* matches the 960x200 art; aspect-ratio + min-height forced a ~922px min-width on phones */
+  height: max(12rem, 100vw * 200 / 960);
   background: var(--footer-art) no-repeat bottom center / cover;
 }
 
